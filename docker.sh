@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mvn clean package
+mvnw clean package
 cd cas-overlay-server
 docker build -t cas-overlay-server .
 docker run --name server -p 127.0.0.1:8080:8080 -i -d cas-overlay-server

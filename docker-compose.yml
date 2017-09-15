@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  cas-management:
+    image: cas-overlay-management:latest
+    build:
+        context: .
+        dockerfile: cas-overlay-management-demo/Dockerfile
+    ports:
+      - "8081:8081"
